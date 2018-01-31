@@ -1,4 +1,4 @@
-package day02;
+package daily.day02;
 
 public class PlusTest2
 {

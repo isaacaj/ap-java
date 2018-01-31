@@ -1,4 +1,4 @@
-package ch1;
+package chapters.ch1;
 
 /*
  * 1. Difference between statement & comment

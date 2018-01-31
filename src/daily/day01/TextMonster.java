@@ -1,4 +1,4 @@
-package day01;
+package daily.day01;
 
 public class TextMonster
 {

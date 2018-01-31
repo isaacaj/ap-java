@@ -1,4 +1,4 @@
-package ch2;
+package chapters.ch2;
 
 public class Date
 {
