@@ -24,7 +24,7 @@ public class LunarEclipseSurvey
 
         for (int j = 0; j < numPeople; j++)
         {
-            System.out.println(people[j] + " | seen eclipse? | " + response[j]);
+            System.out.println(people[j] + "\t| seen eclipse? |\t" + response[j]);
         }
     }
 
