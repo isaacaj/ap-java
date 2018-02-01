@@ -4,19 +4,17 @@ import java.util.Scanner;
 
 public class LunarEclipseSurvey
 {
-    private static Scanner scanner = new Scanner(System.in);
-
     static int numPeople;
     static String[] people;
     static String[] response;
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
     {
-        System.out.println("How many people need to be surveyed?");
-        numPeople = scanner.nextInt();
+        entry();
+
         people = new String[numPeople];
         response = new String[numPeople];
-        scanner.nextLine();
         for (int i = 0; i < numPeople; i++)
         {
             poll(i);
@@ -25,6 +23,28 @@ public class LunarEclipseSurvey
         for (int j = 0; j < numPeople; j++)
         {
             System.out.println(people[j] + "\t| seen eclipse? |\t" + response[j]);
+        }
+    }
+
+    private static void getNum()
+    {
+        numPeople = scanner.nextInt();
+        scanner.nextLine();
+    }
+
+    private static void entry()
+    {
+        System.out.println("How many people need to be surveyed?");
+        if (scanner.hasNextInt())
+        {
+            getNum();
+        }
+
+        else
+        {
+            System.out.println("Please enter a number.");
+            scanner.nextLine();
+            entry();
         }
     }
 
