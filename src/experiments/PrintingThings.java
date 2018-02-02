@@ -7,6 +7,11 @@ public class PrintingThings
 {
     public static void main(String[] args)
     {
-        System.out.println(0.25 * 2);
+        int apple = 3;
+        double banana = 7.52;
+        System.out.println(7/2);
+
+        banana = (double) apple;
+        System.out.println(apple);
     }
 }
