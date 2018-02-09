@@ -1,7 +1,7 @@
 package daily.day07;
 
 import java.util.Scanner;
-import experiments.CleanScanner;
+import experiments.NumScanner;
 
 public class GuessIA1
 {
@@ -22,7 +22,7 @@ public class GuessIA1
 
     public static int getInput()
     {
-        return CleanScanner.cleanNextInt("What number am I thinking of?", scanner);
+        return NumScanner.cleanNextInt("What number am I thinking of?", scanner);
     }
 
     private static void evalGuess()

@@ -1,6 +1,6 @@
 package daily.day07;
 
-import experiments.CleanScanner;
+import experiments.NumScanner;
 import java.util.Scanner;
 
 public class FermatIA1
@@ -10,10 +10,10 @@ public class FermatIA1
 
     public static void main(String[] args)
     {
-        int a = CleanScanner.cleanNextInt("a = ?", scanner);
-        int b = CleanScanner.cleanNextInt("b = ?", scanner);
-        int c = CleanScanner.cleanNextInt("c = ?", scanner);
-        int n = CleanScanner.cleanNextInt("n = ?", scanner);
+        int a = NumScanner.cleanNextInt("a = ?", scanner);
+        int b = NumScanner.cleanNextInt("b = ?", scanner);
+        int c = NumScanner.cleanNextInt("c = ?", scanner);
+        int n = NumScanner.cleanNextInt("n = ?", scanner);
 
         if (Math.pow(a, n) + Math.pow(b, n) == Math.pow(c, n) && n > 2)
         {

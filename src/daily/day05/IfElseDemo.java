@@ -1,6 +1,6 @@
 package daily.day05;
 
-import experiments.CleanScanner;
+import experiments.NumScanner;
 import java.util.Scanner;
 
 public class IfElseDemo
@@ -13,7 +13,7 @@ public class IfElseDemo
     {
         System.out.println("Hello! What is your name?");
         name = scanner.nextLine();
-        age = CleanScanner.cleanNextInt(("Alright, " + name + ". How old are you?"), scanner);
+        age = NumScanner.cleanNextInt(("Alright, " + name + ". How old are you?"), scanner);
         giveAdvice(age, name);
     }
 
