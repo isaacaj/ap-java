@@ -1,6 +1,5 @@
 package experiments;
 
-import experiments.NumScanner;
 import java.util.Scanner;
 
 public class ChangeChallenge
@@ -8,9 +7,16 @@ public class ChangeChallenge
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        final int pennies = NumScanner.cleanNextInt("How many pennies do you have?", scanner);
-        final int nickels = NumScanner.cleanNextInt("How many nickels do you have?", scanner);
-        final int change = NumScanner.cleanNextInt("How much change needs to be made?", scanner);
+        NumScanner numScanner = new NumScanner(scanner);
+
+        System.out.println("How many pennies do you have?");
+        final int pennies = numScanner.nextInt();
+
+        System.out.println("How many nickels do you have?");
+        final int nickels = numScanner.nextInt();
+
+        System.out.println("How much change do you need?");
+        final int change = numScanner.nextInt();
 
         if (makeChange(pennies, nickels, change))
         { System.out.println("You have enough coins to make change."); }

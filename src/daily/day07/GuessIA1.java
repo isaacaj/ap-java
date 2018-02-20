@@ -1,11 +1,13 @@
 package daily.day07;
 
 import java.util.Scanner;
+
 import experiments.NumScanner;
 
 public class GuessIA1
 {
     static Scanner scanner = new Scanner(System.in);
+    static NumScanner numScanner = new NumScanner(scanner);
     static int targetNum = (int) (Math.random()*100);
 
     public static void main(String[] args)
@@ -22,7 +24,8 @@ public class GuessIA1
 
     public static int getInput()
     {
-        return NumScanner.cleanNextInt("What number am I thinking of?", scanner);
+        System.out.println("What number am I thinking of?");
+        return numScanner.nextInt();
     }
 
     private static void evalGuess()

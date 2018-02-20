@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class WhatSeason
 {
     static Scanner scanner = new Scanner(System.in);
+    static NumScanner numScanner = new NumScanner(scanner);
 
     public static void main(String[] args)
     {
@@ -14,7 +15,8 @@ public class WhatSeason
 
     private static int askMonth()
     {
-        return NumScanner.cleanNextInt("What is the month?", scanner);
+        System.out.println("What is the month?");
+        return numScanner.nextInt();
     }
 
     private static void evalMonth()
@@ -47,11 +49,13 @@ public class WhatSeason
 
     private static int askDate()
     {
-        return NumScanner.cleanNextInt("What is the date?", scanner);
+        System.out.println("What is the date?");
+        return numScanner.nextInt();
     }
 
     private static int askYear()
     {
-        return NumScanner.cleanNextInt("What is the year?", scanner);
+        System.out.println("What is the year?");
+        return numScanner.nextInt();
     }
 }

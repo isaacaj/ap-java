@@ -7,14 +7,12 @@ public class PrintingThings
 {
     public static void main(String[] args)
     {
-        System.out.println(sumDigits(25));
-    }
-
-    private static int sumDigits(int num)
-    {
-        if (num != 0)
-            return (num % 10) + sumDigits(num / 10);
-        else
-            return 0;
+        int x = 4;
+        int product = 1;
+        while (x > 0)
+        {
+            System.out.println(product = x*product);
+            x--;
+        }
     }
 }

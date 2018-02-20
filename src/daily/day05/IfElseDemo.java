@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class IfElseDemo
 {
     static Scanner scanner = new Scanner(System.in);
+    static NumScanner numScanner = new NumScanner(scanner);
     static String name;
     static int age;
 
@@ -13,7 +14,8 @@ public class IfElseDemo
     {
         System.out.println("Hello! What is your name?");
         name = scanner.nextLine();
-        age = NumScanner.cleanNextInt(("Alright, " + name + ". How old are you?"), scanner);
+        System.out.println("Alright, " + name + ". How old are you?");
+        age = numScanner.nextInt();
         giveAdvice(age, name);
     }
 

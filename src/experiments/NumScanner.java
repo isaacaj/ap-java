@@ -4,74 +4,59 @@ import java.util.Scanner;
 
 public class NumScanner
 {
+    Scanner _scanner;
 
-    //TODO: Constructors are pretty cool
+    public NumScanner(Scanner scanner) { this._scanner = scanner; }
 
-    public static double cleanNextDouble(Scanner scanner)
+    public double nextDouble()
     {
-        if (scanner.hasNextDouble())
+        if (_scanner.hasNextDouble())
         {
-            return scanner.nextDouble();
+            return _scanner.nextDouble();
         } else
         {
             System.out.println("Please enter an integer or decimal value.");
-            scanner.nextLine();
-            return cleanNextDouble(scanner);
+            _scanner.nextLine();
+            return nextDouble();
         }
     }
 
-    public static double cleanNextDouble(String prompt, Scanner scanner)
+    public double nextDouble(String prompt)
     {
-        System.out.println(prompt);
-        if (scanner.hasNextDouble())
+        if (_scanner.hasNextDouble())
         {
-            return scanner.nextDouble();
+            return _scanner.nextDouble();
         } else
         {
             System.out.println("Please enter an integer or decimal value.");
-            scanner.nextLine();
-            return cleanNextDouble(prompt, scanner);
+            _scanner.nextLine();
+            return nextDouble(prompt);
         }
     }
 
-    public static int cleanNextInt(Scanner scanner)
+    public int nextInt()
     {
-        if (scanner.hasNextInt())
+        if (_scanner.hasNextInt())
         {
-            return scanner.nextInt();
+            return _scanner.nextInt();
         } else
         {
             System.out.println("Please enter an integer.");
-            scanner.nextLine();
-            return cleanNextInt(scanner);
+            _scanner.nextLine();
+            return nextInt();
         }
     }
 
-    public static int cleanNextInt(String prompt, Scanner scanner)
+    public int nextInt(String prompt)
     {
-        System.out.println(prompt);
-        if (scanner.hasNextInt())
+        if (_scanner.hasNextInt())
         {
-            return scanner.nextInt();
+            return _scanner.nextInt();
         } else
         {
             System.out.println("Please enter an integer.");
-            scanner.nextLine();
-            return cleanNextInt(prompt, scanner);
-        }
-    }
-
-    public static int cleanNextInt(String prompt, Scanner scanner, int lowerLimit, int upperLimit)
-    {
-        System.out.println(prompt);
-        if (scanner.hasNextInt() && scanner.nextInt() >= lowerLimit && scanner.nextInt() <= upperLimit)
-        {
-            return scanner.nextInt();
-        } else
-        {
-            System.out.println("Please enter an integer between the indicated range. (" + lowerLimit + ", " + upperLimit + ")");
-            scanner.nextLine();
-            return cleanNextInt(prompt, scanner, lowerLimit, upperLimit);
+            _scanner.nextLine();
+            return nextInt(prompt);
         }
     }
 }

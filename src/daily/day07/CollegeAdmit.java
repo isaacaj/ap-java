@@ -1,7 +1,8 @@
 package daily.day07;
 
-import java.util.Scanner;
 import experiments.NumScanner;
+
+import java.util.Scanner;
 
 public class CollegeAdmit
 {
@@ -12,7 +13,7 @@ public class CollegeAdmit
      You were accepted!
      */
     static Scanner scanner = new Scanner(System.in);
-
+    static NumScanner numScanner = new NumScanner(scanner);
     static double gpa = -1;
     static int sat = -1;
 
@@ -27,7 +28,8 @@ public class CollegeAdmit
 
     private static void askGPA()
     {
-        gpa = NumScanner.cleanNextDouble("What is your GPA?", scanner);
+        System.out.println("What is your GPA?");
+        gpa = numScanner.nextDouble();
     }
 
     private static void askSAT(double GPA)
@@ -38,7 +40,8 @@ public class CollegeAdmit
         }
         else
         {
-            sat = NumScanner.cleanNextInt("What is your SAT score?", scanner);
+            System.out.println("What is your SAT score?");
+            sat = numScanner.nextInt();
         }
     }
 
