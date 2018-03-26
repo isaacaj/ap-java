@@ -2,12 +2,12 @@ package daily.day07;
 
 import java.util.Scanner;
 
-import experiments.NumScanner;
+import util.NumScanner;
 
 public class GuessIA1
 {
     static Scanner scanner = new Scanner(System.in);
-    static NumScanner numScanner = new NumScanner(scanner);
+    static NumScanner numScanner = new NumScanner();
     static int targetNum = (int) (Math.random()*100);
 
     public static void main(String[] args)

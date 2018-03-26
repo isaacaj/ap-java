@@ -1,12 +1,12 @@
 package daily.day05;
 
-import experiments.NumScanner;
+import util.NumScanner;
 import java.util.Scanner;
 
 public class IfElseDemo
 {
     static Scanner scanner = new Scanner(System.in);
-    static NumScanner numScanner = new NumScanner(scanner);
+    static NumScanner numScanner = new NumScanner();
     static String name;
     static int age;
 

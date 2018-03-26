@@ -1,61 +1,63 @@
-package experiments;
+package util;
 
 import java.util.Scanner;
 
 public class NumScanner
 {
-    Scanner _scanner;
+    private Scanner scanner = new Scanner(System.in);
 
-    public NumScanner(Scanner scanner) { this._scanner = scanner; }
+    public NumScanner() { }
 
     public double nextDouble()
     {
-        if (_scanner.hasNextDouble())
+        if (scanner.hasNextDouble())
         {
-            return _scanner.nextDouble();
+            return scanner.nextDouble();
         } else
         {
             System.out.println("Please enter an integer or decimal value.");
-            _scanner.nextLine();
+            scanner.nextLine();
             return nextDouble();
         }
     }
 
     public double nextDouble(String prompt)
     {
-        if (_scanner.hasNextDouble())
+        if (scanner.hasNextDouble())
         {
-            return _scanner.nextDouble();
+            return scanner.nextDouble();
         } else
         {
+            System.out.println(prompt + "\n");
             System.out.println("Please enter an integer or decimal value.");
-            _scanner.nextLine();
+            scanner.nextLine();
             return nextDouble(prompt);
         }
     }
 
     public int nextInt()
     {
-        if (_scanner.hasNextInt())
+        if (scanner.hasNextInt())
         {
-            return _scanner.nextInt();
+            return scanner.nextInt();
         } else
         {
             System.out.println("Please enter an integer.");
-            _scanner.nextLine();
+            scanner.nextLine();
             return nextInt();
         }
     }
 
     public int nextInt(String prompt)
     {
-        if (_scanner.hasNextInt())
+        if (scanner.hasNextInt())
         {
-            return _scanner.nextInt();
+            return scanner.nextInt();
         } else
         {
+            System.out.println(prompt + "\n");
             System.out.println("Please enter an integer.");
-            _scanner.nextLine();
+            scanner.nextLine();
             return nextInt(prompt);
         }
     }

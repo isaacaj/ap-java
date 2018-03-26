@@ -1,6 +1,6 @@
 package daily.day07;
 
-import experiments.NumScanner;
+import util.NumScanner;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class CollegeAdmit
      You were accepted!
      */
     static Scanner scanner = new Scanner(System.in);
-    static NumScanner numScanner = new NumScanner(scanner);
+    static NumScanner numScanner = new NumScanner();
     static double gpa = -1;
     static int sat = -1;
 

@@ -7,12 +7,10 @@ public class PrintingThings
 {
     public static void main(String[] args)
     {
-        int x = 4;
-        int product = 1;
-        while (x > 0)
-        {
-            System.out.println(product = x*product);
-            x--;
-        }
+        char a = 'A';
+        char b = 'b';
+        char nothing = ' ' - 32;
+
+        System.out.println(a + nothing);
     }
 }

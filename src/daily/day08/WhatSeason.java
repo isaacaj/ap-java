@@ -1,12 +1,12 @@
 package daily.day08;
 
-import experiments.NumScanner;
+import util.NumScanner;
 import java.util.Scanner;
 
 public class WhatSeason
 {
     static Scanner scanner = new Scanner(System.in);
-    static NumScanner numScanner = new NumScanner(scanner);
+    static NumScanner numScanner = new NumScanner();
 
     public static void main(String[] args)
     {

@@ -1,13 +1,13 @@
 package daily.day07;
 
-import experiments.NumScanner;
+import util.NumScanner;
 import java.util.Scanner;
 
 public class FermatIA1
 {
 
     static Scanner scanner = new Scanner(System.in);
-    static NumScanner numScanner = new NumScanner(scanner);
+    static NumScanner numScanner = new NumScanner();
 
     public static void main(String[] args)
     {

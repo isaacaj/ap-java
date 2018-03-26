@@ -1,0 +1,21 @@
+A person has a first and last name, an age, and a unique ID.
+Make all of these variables private.
+Now using eclipse, create getters and setters for all variables,
+except ID, that should only have a getter. Why?
+
+Create constructors for a default person, and a person who
+knows their name, and age at creation.
+
+Create a toString so the person is printed in a neat, formatted way.
+
+Check to see if a person is unique.
+
+Create a method that ages the person one year.
+
+Create a person a, with your name, age.
+print out a
+age a another year
+change a's name to be your neighbor
+print out a
+create another person b, with some name, age.
+check to see if a and b are equal

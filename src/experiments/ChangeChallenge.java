@@ -1,5 +1,7 @@
 package experiments;
 
+import util.NumScanner;
+
 import java.util.Scanner;
 
 public class ChangeChallenge
@@ -7,7 +9,7 @@ public class ChangeChallenge
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        NumScanner numScanner = new NumScanner(scanner);
+        NumScanner numScanner = new NumScanner();
 
         System.out.println("How many pennies do you have?");
         final int pennies = numScanner.nextInt();
