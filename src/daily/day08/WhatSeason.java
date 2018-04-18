@@ -1,6 +1,7 @@
 package daily.day08;
 
 import util.NumScanner;
+
 import java.util.Scanner;
 
 public class WhatSeason
@@ -26,20 +27,16 @@ public class WhatSeason
         if (month >= 6 && month < 9)
         {
             System.out.println("It is summer.");
-        }
-        else if (month >= 9 && month < 12)
+        } else if (month >= 9 && month < 12)
         {
             System.out.println("It is autumn.");
-        }
-        else if (month >= 1 && month < 3)
+        } else if (month >= 1 && month < 3)
         {
             System.out.println("It is winter.");
-        }
-        else if (month >= 3 && month < 6)
+        } else if (month >= 3 && month < 6)
         {
             System.out.println("It is spring.");
-        }
-        else
+        } else
         {
             System.out.println("You have entered an invalid month.");
             evalMonth();

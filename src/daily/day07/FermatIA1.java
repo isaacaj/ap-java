@@ -1,6 +1,7 @@
 package daily.day07;
 
 import util.NumScanner;
+
 import java.util.Scanner;
 
 public class FermatIA1
@@ -27,9 +28,7 @@ public class FermatIA1
         {
             System.out.println(Math.pow(a, n) + " + " + Math.pow(b, n) + " = " + Math.pow(c, n));
             System.out.println("Holy smokes, Fermat was wrong!");
-        }
-
-        else
+        } else
         {
             System.out.println(Math.pow(a, n) + " + " + Math.pow(b, n) + " = " + (Math.pow(a, n) + Math.pow(b, n)));
             System.out.println("c^n = " + Math.pow(c, n));

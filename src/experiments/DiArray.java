@@ -7,15 +7,18 @@ import java.util.Arrays;
 
 public class DiArray extends ArrayList<Di>
 {
-    private DiArray() {
+    private DiArray()
+    {
 
     }
 
-    public DiArray(Di[] diArray) {
+    public DiArray(Di[] diArray)
+    {
         this.addAll(Arrays.asList(diArray));
     }
 
-    public int getSumOfDiValues(){
+    public int getSumOfDiValues()
+    {
         return this.stream().mapToInt(di -> di.getRoll()).sum();
     }
 }

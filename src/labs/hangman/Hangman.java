@@ -1,25 +1,28 @@
 package labs.hangman;
 
+import util.NumScanner;
+
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman
 {
-    private static final String TITLE = "  o         o                                                                               \n" +
-            " <|>       <|>                                                                              \n" +
-            " < >       < >                                                                              \n" +
+    private static final String TITLE = "  o         o\n" +
+            " <|>       <|>\n" +
+            " < >       < >\n" +
             "  |         |      o__ __o/  \\o__ __o     o__ __o/  \\o__ __o__ __o      o__ __o/  \\o__ __o  \n" +
             "  o__/_ _\\__o     /v     |    |     |>   /v     |    |     |     |>    /v     |    |     |> \n" +
-            "  |         |    />     / \\  / \\   / \\  />     / \\  / \\   / \\   / \\   />     / \\  / \\   / \\ \n" +
-            " <o>       <o>   \\      \\o/  \\o/   \\o/  \\      \\o/  \\o/   \\o/   \\o/   \\      \\o/  \\o/   \\o/ \n" +
+            "  |         |    />     / \\  / \\   / \\  />     / \\  / \\   / \\   / \\   />     / \\  / \\   / \\\n" +
+            " <o>       <o>   \\      \\o/  \\o/   \\o/  \\      \\o/  \\o/   \\o/   \\o/   \\      \\o/  \\o/   \\o/\n" +
             "  |         |     o      |    |     |    o      |    |     |     |     o      |    |     |  \n" +
-            " / \\       / \\    <\\__  / \\  / \\   / \\   <\\__  < >  / \\   / \\   / \\    <\\__  / \\  / \\   / \\ \n" +
+            " / \\       / \\    <\\__  / \\  / \\   / \\   <\\__  < >  / \\   / \\   / \\    <\\__  / \\  / \\   / \\\n" +
             "                                                |                                           \n" +
-            "                                        o__     o                                           \n" +
-            "                                        <\\__ __/>                                           ";
+            "                                        o__     o\n" +
+            "                                        <\\__ __/>";
     private static final String FILE_NAME = "src/labs/hangman/res/wordlist.txt";
     private String progress;
     private int wrongGuesses;
@@ -27,18 +30,53 @@ public class Hangman
     private ArrayList<Character> guessedChars = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
-    Hangman() throws FileNotFoundException
+    Hangman() throws IOException
     {
         this.wrongGuesses = 0;
-        this.word = getRandomWord(makeArrayList(FILE_NAME));
+        this.word = getRandomWord(makeArrayList(FILE_NAME), askDifficulty());
         this.progress = makeProgressWord(this.word);
+
+        Statistics statistics = new Statistics();
     }
 
-    private static String getRandomWord(ArrayList<String> list)
+    private static String getRandomWord(ArrayList<String> list, int difficulty)
     {
         Random r = new Random();
+        String randomWord = "";
 
-        return list.get(r.nextInt(list.size()));
+        if (r.nextInt(11) == 10)
+        {
+            return list.get(2126);
+        }
+
+        switch (difficulty)
+        {
+            default:
+                while (randomWord.length() < 2 || randomWord.length() >= 4)
+                    randomWord = list.get(r.nextInt(list.size() + 1));
+                break;
+
+            case 1:
+                while (randomWord.length() < 4 || randomWord.length() >= 6)
+                    randomWord = list.get(r.nextInt(list.size() + 1));
+                break;
+
+            case 2:
+                while (randomWord.length() < 6 || randomWord.length() >= 8)
+                    randomWord = list.get(r.nextInt(list.size() + 1));
+                break;
+
+            case 3:
+                while (randomWord.length() < 8 || randomWord.length() >= 10)
+                    randomWord = list.get(r.nextInt(list.size() + 1));
+                break;
+        }
+
+        if (difficulty > 3)
+            while (randomWord.length() < 10)
+                randomWord = list.get(r.nextInt(list.size() + 1));
+
+        return randomWord;
     }
 
     private static ArrayList<String> makeArrayList(String fileName) throws FileNotFoundException
@@ -108,15 +146,15 @@ public class Hangman
 
     private void playAgain() throws FileNotFoundException
     {
-        System.out.println("Play again?");
+        System.out.println("Play again? (yes/no)");
 
         if (scanner.hasNextLine())
         {
             try
             {
-                if (scanner.nextLine().charAt(0) == 'y')
+                if (Character.toLowerCase(scanner.nextLine().charAt(0)) == 'y')
                 {
-                    this.word = getRandomWord(makeArrayList(FILE_NAME));
+                    this.word = getRandomWord(makeArrayList(FILE_NAME), askDifficulty());
                     this.wrongGuesses = 0;
                     this.progress = makeProgressWord(word);
                     this.guessedChars = new ArrayList<>();
@@ -131,6 +169,13 @@ public class Hangman
                 System.out.println("Thanks for playing!");
             }
         }
+    }
+
+    private int askDifficulty()
+    {
+        NumScanner scanner = new NumScanner();
+        System.out.println("Pick a difficulty (0 to 4):");
+        return scanner.nextInt(0, 5);
     }
 
     private char askGuess()
@@ -188,6 +233,9 @@ public class Hangman
     private boolean evaluateGuess(char c, boolean recordWrongGuess)
     {
         c = Character.toLowerCase(c);
+
+        if (guessedChars.contains(c))
+            return true;
 
         boolean correct = false;
 

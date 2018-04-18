@@ -14,7 +14,7 @@ public class Quadratics
 
         for (double num : xVal)
         {
-            System.out.println("At X = " + num + " the value is " + (3*(Math.pow(num, 2)) - 8*num + 4));
+            System.out.println("At X = " + num + " the value is " + (3 * (Math.pow(num, 2)) - 8 * num + 4));
         }
     }
 }

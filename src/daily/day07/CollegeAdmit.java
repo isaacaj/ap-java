@@ -22,8 +22,7 @@ public class CollegeAdmit
         askGPA();
         askSAT(gpa);
 
-        if (sat >= 1200) { System.out.println("You were accepted!"); }
-        else { System.out.println("Hmm, maybe not."); }
+        if (sat >= 1200) { System.out.println("You were accepted!"); } else { System.out.println("Hmm, maybe not."); }
     }
 
     private static void askGPA()
@@ -34,11 +33,10 @@ public class CollegeAdmit
 
     private static void askSAT(double GPA)
     {
-        if(GPA < 3.0)
+        if (GPA < 3.0)
         {
             System.out.println("Maybe this college isn't for you.");
-        }
-        else
+        } else
         {
             System.out.println("What is your SAT score?");
             sat = numScanner.nextInt();

@@ -26,7 +26,7 @@ public class FrameExperiment
         panel.add(label);
         panel.add(label0);
 
-        button1.setSize(60,60);
+        button1.setSize(60, 60);
 
         frame.add(panel);
         frame.setSize(720, 720);

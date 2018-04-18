@@ -57,7 +57,7 @@ public class SevenIA1
 
         for (int i = 1; i <= n; i++)
         {
-            sum += numerator/denominator;
+            sum += numerator / denominator;
 
             numerator *= x;
             denominator *= i;

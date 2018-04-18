@@ -265,9 +265,7 @@ public class ArrayListPractice
             if (list.get(i).length() > list.get(i + 1).length())
             {
                 list.remove(i + 1);
-            }
-
-            else
+            } else
             {
                 list.remove(i);
             }
@@ -288,9 +286,7 @@ public class ArrayListPractice
                 list.set(i, list.get(i + 1));
                 list.set(i + 1, swap);
             }
-        }
-
-        else
+        } else
         {
             for (int i = 0; i < list.size(); i += 2)
             {

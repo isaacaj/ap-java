@@ -1,4 +1,6 @@
-/** ISAAC ASH-JOHNSON **/
+/**
+ * ISAAC ASH-JOHNSON
+ **/
 package daily.piDay;
 
 import labs.point.Point;

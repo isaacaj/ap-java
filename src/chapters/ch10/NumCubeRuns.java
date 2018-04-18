@@ -47,9 +47,7 @@ public class NumCubeRuns
                     longestRun = currentRun;
                     longestRunIndex = roll - currentRun + 1;
                 }
-            }
-
-            else
+            } else
             {
                 currentRun = 0;
             }

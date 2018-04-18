@@ -33,15 +33,14 @@ public class SeeMovieIA1
 
     private static String seeMovie(double price, int rating)
     {
-        if(price < 5.0D)
+        if (price < 5.0D)
         {
             return "You are very interested in this movie!";
-        }
-        else if(price > 10.0D) {
+        } else if (price > 10.0D)
+        {
             return "";
-        }
-
-        else {
+        } else
+        {
             return "";
         }
     }

@@ -16,12 +16,12 @@ public class DigitsInARowIA1
 
         while (num > 0)
         {
-            if (num % 10 == (num/10) % 10)
+            if (num % 10 == (num / 10) % 10)
             {
                 digits[num % 10]++;
             }
 
-            num = num/10;
+            num = num / 10;
         }
 
         for (int number : digits)

@@ -1,7 +1,5 @@
 package daily.day08;
 
-import java.lang.reflect.Method;
-
 public class OldLady
 {
     public static void main(String[] args)
@@ -22,9 +20,7 @@ public class OldLady
             System.out.println("There was an old woman who swallowed a fly,\n" +
                     "I don't know why she swallowed that fly," +
                     "Perhaps she'll die.\n\n");
-        }
-
-        else
+        } else
         {
             System.out.println("I don't know why she swallowed that fly,\n" + "Perhaps she'll die.\n\n");
         }
@@ -38,9 +34,7 @@ public class OldLady
                     "That wriggled and jiggled and tickled inside her.");
 
             spider(false);
-        }
-
-        else
+        } else
         {
             System.out.println("She swallowed the spider to catch the fly,");
             fly(false);
@@ -55,9 +49,7 @@ public class OldLady
                     "How absurd to swallow a bird.");
 
             bird(false);
-        }
-
-        else
+        } else
         {
             System.out.println("She swallowed the bird to catch the spider,");
             spider(false);
@@ -72,9 +64,7 @@ public class OldLady
                     "Imagine that to swallow a cat.");
 
             cat(false);
-        }
-
-        else
+        } else
         {
             System.out.println("She swallowed the cat to catch the bird,");
             bird(false);
@@ -89,9 +79,7 @@ public class OldLady
                     "What a hog to swallow a dog.");
 
             dog(false);
-        }
-
-        else
+        } else
         {
             System.out.println("She swallowed the dog to catch the cat,");
             cat(false);
@@ -106,9 +94,7 @@ public class OldLady
                     "What an appetite to swallow a wolf.");
 
             wolf(false);
-        }
-
-        else
+        } else
         {
             System.out.println("She swallowed the wolf to catch the dog,");
             dog(false);

@@ -38,9 +38,7 @@ public class LunarEclipseSurvey
         if (scanner.hasNextInt())
         {
             getNum();
-        }
-
-        else
+        } else
         {
             System.out.println("Please enter a number.");
             scanner.nextLine();

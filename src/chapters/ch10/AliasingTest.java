@@ -6,7 +6,7 @@ public class AliasingTest
 {
     public static void main(String[] args)
     {
-        Rectangle rectangle = new Rectangle(0 ,0, 2, 2);
+        Rectangle rectangle = new Rectangle(0, 0, 2, 2);
         Rectangle a_rectangle = rectangle;
 
         System.out.println(getArea(rectangle));

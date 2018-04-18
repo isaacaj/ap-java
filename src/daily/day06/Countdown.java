@@ -10,7 +10,7 @@ public class Countdown
 
     private static void countdown(int n)
     {
-        if(n == 0)
+        if (n == 0)
             System.out.println(n);
         else
         {
@@ -21,12 +21,11 @@ public class Countdown
 
     private static void countdown(int n, String message)
     {
-        if(n == 0)
+        if (n == 0)
         {
             System.out.println(n);
             System.out.println(message);
-        }
-        else
+        } else
         {
             System.out.println(n);
             countdown(--n, message);

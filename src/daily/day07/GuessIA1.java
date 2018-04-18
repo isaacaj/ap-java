@@ -1,14 +1,14 @@
 package daily.day07;
 
-import java.util.Scanner;
-
 import util.NumScanner;
+
+import java.util.Scanner;
 
 public class GuessIA1
 {
     static Scanner scanner = new Scanner(System.in);
     static NumScanner numScanner = new NumScanner();
-    static int targetNum = (int) (Math.random()*100);
+    static int targetNum = (int) (Math.random() * 100);
 
     public static void main(String[] args)
     {
@@ -31,18 +31,14 @@ public class GuessIA1
     private static void evalGuess()
     {
         int guess = getInput();
-        if(guess == targetNum)
+        if (guess == targetNum)
         {
             System.out.println("Correct! Well played, human.");
-        }
-
-        else if(guess < targetNum)
+        } else if (guess < targetNum)
         {
             System.out.println("Your guess is too low. Guess again!");
             evalGuess();
-        }
-
-        else
+        } else
         {
             System.out.println("Your guess is too high. Give it another go.");
             evalGuess();

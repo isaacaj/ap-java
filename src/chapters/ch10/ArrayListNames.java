@@ -1,8 +1,8 @@
 package chapters.ch10;
 
 import util.LoremIpsum;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ArrayListNames
 {

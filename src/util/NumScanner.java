@@ -48,6 +48,30 @@ public class NumScanner
         }
     }
 
+    public int nextInt(int lowerBound, int upperBound)
+    {
+        if (scanner.hasNextInt())
+        {
+            int num = scanner.nextInt();
+
+            if (num >= lowerBound && num < upperBound)
+            {
+                return num;
+            } else
+            {
+                System.out.println("Please enter an integer between " + lowerBound + " and " + (upperBound - 1) + ".");
+                scanner.nextLine();
+                return nextInt(lowerBound, upperBound);
+            }
+
+        } else
+        {
+            System.out.println("Please enter an integer.");
+            scanner.nextLine();
+            return nextInt(lowerBound, upperBound);
+        }
+    }
+
     public int nextInt(String prompt)
     {
         if (scanner.hasNextInt())

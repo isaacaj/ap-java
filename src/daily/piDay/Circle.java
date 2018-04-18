@@ -1,4 +1,6 @@
-/** ISAAC ASH-JOHNSON **/
+/**
+ * ISAAC ASH-JOHNSON
+ **/
 package daily.piDay;
 
 import labs.point.Point;
@@ -72,7 +74,7 @@ public class Circle
      */
     public double getArcLength(double degrees)
     {
-        return getCircumference() * (degrees/360);
+        return getCircumference() * (degrees / 360);
     }
 
     /**

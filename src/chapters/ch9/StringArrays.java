@@ -5,6 +5,7 @@ import java.util.Random;
 public class StringArrays
 {
     static Random random = new Random();
+
     public static void main(String[] args)
     {
         String[] apples = {"Red Lady", "Honeycrisp", "Granny Smith"};

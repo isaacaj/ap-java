@@ -24,12 +24,24 @@ public class YahtzeeScoreKeeper
         {
             switch (di.getRoll())
             {
-                case 1: hist[0]++; break;
-                case 2: hist[1]++; break;
-                case 3: hist[2]++; break;
-                case 4: hist[3]++; break;
-                case 5: hist[4]++; break;
-                case 6: hist[5]++; break;
+                case 1:
+                    hist[0]++;
+                    break;
+                case 2:
+                    hist[1]++;
+                    break;
+                case 3:
+                    hist[2]++;
+                    break;
+                case 4:
+                    hist[3]++;
+                    break;
+                case 5:
+                    hist[4]++;
+                    break;
+                case 6:
+                    hist[5]++;
+                    break;
             }
         }
 
@@ -189,44 +201,32 @@ public class YahtzeeScoreKeeper
             builder.append("YAHTZEE!");
             System.out.println(builder.toString());
             return 50;
-        }
-
-        else if (isLargeStraight())
+        } else if (isLargeStraight())
         {
             builder.append("LARGE STRAIGHT!");
             System.out.println(builder.toString());
             return 40;
-        }
-
-        else if (isSmallStraight())
+        } else if (isSmallStraight())
         {
             builder.append("SMALL STRAIGHT!");
             System.out.println(builder.toString());
             return 30;
-        }
-
-        else if (isFullHouse())
+        } else if (isFullHouse())
         {
             builder.append("FULL HOUSE!");
             System.out.println(builder.toString());
             return 25;
-        }
-
-        else if (isFourOfAKind())
+        } else if (isFourOfAKind())
         {
             builder.append("FOUR OF A KIND!");
             System.out.println(builder.toString());
             return sumOfHand();
-        }
-
-        else if (isThreeOfAKind())
+        } else if (isThreeOfAKind())
         {
             builder.append("THREE OF A KIND!");
             System.out.println(builder.toString());
             return sumOfHand();
-        }
-
-        else
+        } else
         {
             builder.append("You do not have any lower box scoring options.");
             System.out.println(builder.toString());

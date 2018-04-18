@@ -4,7 +4,7 @@ public class JuiceIA1
 {
     public static void main(String[] args)
     {
-        for(int bottles = 99; bottles > 0; --bottles)
+        for (int bottles = 99; bottles > 0; --bottles)
         {
             System.out.println(bottles + " bottles of juice on the wall,");
             System.out.println(bottles + " bottles of juice!");

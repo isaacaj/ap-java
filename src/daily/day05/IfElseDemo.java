@@ -1,6 +1,7 @@
 package daily.day05;
 
 import util.NumScanner;
+
 import java.util.Scanner;
 
 public class IfElseDemo

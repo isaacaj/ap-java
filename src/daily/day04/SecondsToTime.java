@@ -29,21 +29,17 @@ public class SecondsToTime
         {
             int num = scanner.nextInt();
 
-            if(num >= 0)
+            if (num >= 0)
             {
                 secs = num;
                 scanner.nextLine();
-            }
-
-            else
+            } else
             {
                 System.out.println("Please input an integer between 0 and 86400.");
                 scanner.nextLine();
                 getCleanScan();
             }
-        }
-
-        else
+        } else
         {
             System.out.println("Please input an integer.");
             scanner.nextLine();

@@ -25,16 +25,14 @@ public class HandfulOfTiles
                     System.out.println("This tile has not been used.");
                     if (tiles[j].equalsIgnoreCase(word.substring(i, 1 + i)))
                     {
-                        System.out.println("This tile (" + tiles[j] + ") == " + i + "th letter in word (" + word.substring(i, 1 + i) +"). +1");
+                        System.out.println("This tile (" + tiles[j] + ") == " + i + "th letter in word (" + word.substring(i, 1 + i) + "). +1");
                         tiles[j] = "_";
                         correctLetters++;
-                    }
-                    else
+                    } else
                     {
-                        System.out.println("This tile (" + tiles[j] + ") != " + i + "th letter in word (" + word.substring(i, 1 + i) +"). ");
+                        System.out.println("This tile (" + tiles[j] + ") != " + i + "th letter in word (" + word.substring(i, 1 + i) + "). ");
                     }
-                }
-                else
+                } else
                 {
                     System.out.println("This tile has been used already :(");
                 }
