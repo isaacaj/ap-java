@@ -1,5 +1,8 @@
 package experiments;
 
+import labs.student.Student;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -7,25 +10,14 @@ import java.util.Arrays;
  */
 public class PrintingThings
 {
+    static Student[][] seats;
+
     public static void main(String[] args)
     {
-        String[] spaces = {"apple", "banana", null, "thing", null, null, "cherry", "fruit", "potato", null, "cheesy"};
 
-        for (int i = 0; i < spaces.length - 1; i++)
-        {
-            if (spaces[i] == null && (i != spaces.length - 2))
-            {
-                for (int j = i; j < spaces.length - 1; j++)
-                {
-                    String swap = spaces[j];
-                    spaces[j] = spaces[j+1];
-                    spaces[j+1] = swap;
 
-                    System.out.println(Arrays.toString(spaces));
-                }
 
-                i--;
-            }
-        }
+
     }
+
 }
